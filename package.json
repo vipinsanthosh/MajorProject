@@ -1,0 +1,18 @@
+{
+  "name": "majorproject",
+  "version": "1.0.0",
+  "description": "Major Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Vipin Santhosh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

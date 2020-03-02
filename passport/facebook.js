@@ -20,7 +20,7 @@ passport.use(new FacebookStrategy({
     profileFields: ['email', 'name', 'displayName', 'photos']
 },(accessToken, refreshToken, profile, done)=> {
     console.log(profile);
-    User.findOne({faebook: profile.id}, (err, user)=>{
+    User.findOne({facebook:profile.id}, (err, user)=>{
         if(err){
             return done(err);
         }
@@ -32,7 +32,7 @@ passport.use(new FacebookStrategy({
                 fullname: profile.displayName,
                 lastname: profile.name.familyName,
                 firstname: profile.name.givenName,
-                image: `https://graph.facebook.com/${profile.id}/picture?size=large`,
+                image: `https://graph.facebook.com/${profile.id}/picture?type=large`,
                 email: profile.emails[0].value
             }
             new User(newUser).save((err,user)=> {

@@ -34,7 +34,7 @@ const userSchema = new Schema({
     },
     
     online: {
-        typr: Boolean,
+        type: Boolean,
         default: false
     },
 

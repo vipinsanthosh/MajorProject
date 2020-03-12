@@ -5,6 +5,9 @@ const userSchema = new Schema({
     facebook: {
         type: String,
     },
+    google:{
+        type: String
+    },
     firstname:{
         type: String
     },
@@ -18,7 +21,8 @@ const userSchema = new Schema({
     },
     
     image: {
-        type: String
+        type: String,
+        default:'/img/user.png'
     },
     
     email: {
@@ -41,8 +45,11 @@ const userSchema = new Schema({
     wallet: {
         type: Number,
         default: 0
+    },
+    
+    password: {
+        type: String
     }
-
 });
 
 module.exports = mongoose.model('User', userSchema);
